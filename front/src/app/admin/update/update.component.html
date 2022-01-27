@@ -1,0 +1,81 @@
+<div class="container-fluid pt-3">
+    <div class="card">
+      <div class="card-header">
+        <h3>
+            Edit Product Form
+        </h3>
+      </div>
+      <div class="card-body row">
+        <div class="card col-md-12 col-xs-12">
+          <div class="card-body">
+            <div class="row g-0">
+              <div class="col-md-2 col-xs-12 p-3">
+                <img src="" class="img-fluid rounded-start">
+              </div>
+              <div class="col-md-10 col-xs-12">
+                <div class="card-body">
+                  <form [formGroup]="productForm" (ngSubmit)="submit()">
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label>Title</label>
+                            <input formControlName="title" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label>Description</label>
+                            <input formControlName="description" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label>Price</label>
+                            <input formControlName="price" class="form-control" type="number">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label>Category</label>
+                            <input formControlName="category" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label>Image</label>
+                            <input formControlName="image" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label>Rating Rate</label>
+                            <input formControlName="rating_rate" class="form-control" type="number">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label>Rating Count</label>
+                            <input formControlName="rating_count" class="form-control" type="number">
+                        </div>
+                    </div>
+                </form>
+                  <p class="card-text"></p>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex bd-highlight">
+                    <div class="bd-highlight">
+                    </div>
+                    <div class="ms-auto bd-highlight">
+                      <div class="d-flex justify-content-end">
+                        <button class="btn btn-danger  me-2" (click)="onReset()">🗑️ Reset</button>
+                        <button class="btn btn-success" (click)="submit()">🗑️ Save</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

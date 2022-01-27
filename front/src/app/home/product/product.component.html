@@ -1,0 +1,52 @@
+<ng-template #stillLoading><p>Loading...</p></ng-template>
+
+
+<div class="row" *ngIf="product; else stillLoading">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">                    
+                    <div class="d-flex bd-highlight">
+                        <div class="bd-highlight">
+                            <span href="#" class=" d-flex justify-content-start">
+                                <h1 class="p-3">{{product.title || null}}</h1>
+                            </span>
+                        </div>
+                        <div class="ms-auto bd-highlight">
+                            <span href="#" class=" d-flex justify-content-end">
+                                <h1 class="p-3">{{product.rating_rate}}⭐- {{product.rating_count}} Reviews</h1>
+                                <button class="btn btn-info" routerLink="">
+                                    Go back
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-sm-6">
+                <div class="card">
+                    <img src="{{product.image}}" class="card-img-top" alt="{{product.title}}">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{product.description}}</h5>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex bd-highlight">
+                            <div class="bd-highlight">
+                                <button class="btn btn-info d-flex justify-content-start">{{product.category}}</button>
+                            </div>
+                            <div class="ms-auto bd-highlight">
+                                <button href="#" class="btn btn-success d-flex justify-content-end" (click)="cart.addProduct(product)">${{product.price}} 🛒</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

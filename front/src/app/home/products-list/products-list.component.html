@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col" *ngFor="let product of products" routerLink="/product/{{product.id}}">
+        <div class="card">
+            <h5 class="card-header">{{product.rating_rate}}⭐- {{product.rating_count}} Reviews</h5>
+            <img src="{{product.image}}" class="card-img-top" alt="{{product.title}}">
+            <div class="card-body">
+                <span class="card-title">{{product.title}}</span>
+                <div class="d-flex bd-highlight mb-3">
+                    <div class="p-2 bd-highlight">
+                        <button href="#" class="btn btn-info d-flex justify-content-start">{{product.category}}</button>
+                    </div>
+                    <div class="ms-auto p-2 bd-highlight">
+                        <button href="#" class="btn btn-primary d-flex justify-content-end">${{product.price}} 🛒</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
